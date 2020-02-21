@@ -10,7 +10,7 @@ const location = (latitude, longitude, callback) => {
             console.log('Unable to find location', undefined)
         }else{
             const data = body;
-            callback(undefined, data.hourly.summary + 'It is currently ' + data.currently.temperature + ' degree out. There is a ' + data.currently.precipProbability + '% chance of rain.')
+            callback(undefined, data.hourly.summary + 'It is currently ' + data.currently.temperature + ' degree out. This high today is ' + data.daily.data[0].temperatureHigh + ' with a low of ' + data.daily.data[0].temperatureLow + '. There is a ' + data.currently.precipProbability + '% chance of rain.')
         }
     })
 }
